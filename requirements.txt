@@ -1,0 +1,4 @@
+git+git://github.com/jacexh/pyautoit.git@releases/tag/0.5.0
+pymem
+python-socketio
+urllib3
