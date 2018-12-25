@@ -2,7 +2,7 @@ from .constants import Constants
 from donation_play.games.common_cheater import CommonCheater
 
 
-class GothicCheater(Constants, CommonCheater):
+class Gothic2Cheater(Constants, CommonCheater):
     """Class for working with Gothic cheats."""
 
     def __init__(self, gothic_title, mem_editor=None):

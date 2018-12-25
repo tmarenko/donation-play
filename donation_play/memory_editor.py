@@ -50,14 +50,15 @@ def read_process_memory(pid, address, size=4):
     return buffer[:n_read.value]
 
 
-def write_process_memory(pid, address, data):
+def write_process_memory(pid, address, data, size=4):
     """Write bytes to process memory.
 
     :param pid: process id.
     :param address: address of memory.
     :param data: bytes to write.
+    :param size: number of bytes to write.
     """
-    bytes_data = data.to_bytes(length=len(data), byteorder='little')
+    bytes_data = data.to_bytes(length=size, byteorder='little')
     process = kernel32.OpenProcess(PROCESS_ALL_ACCESS, False, pid)
     try:
         kernel32.WriteProcessMemory(process, address, bytes_data, len(bytes_data), None)

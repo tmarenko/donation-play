@@ -16,7 +16,7 @@ Write function to handle donation events and wait them.
 
 ```python
 from donation_play.donation_alerts import DonationAlerts
-from donation_play.games.gothic.cheater import GothicCheater
+from donation_play.games.gothic import GothicCheater
 from donation_play.memory_editor import MemoryEditor
 
 # Setup game helpers for cheats and console commands
